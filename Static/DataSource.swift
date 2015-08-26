@@ -50,6 +50,9 @@ public class DataSource: NSObject {
         tableView = nil
     }
 
+    func replaceRowAtIndexPath(indexPath: NSIndexPath, withRow row: Row) {
+        self.sections[indexPath.section].rows[indexPath.row] = row
+    }
 
     // MARK: - Private
 
